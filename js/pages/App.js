@@ -1,17 +1,15 @@
 class App {
-    displayData(photographers) {
-        const photographersSection = document.querySelector(".photographer_section");
-  
+    constructor() {
+        this.$photographerSection = document.querySelector(".photographer_section")
+        this.photographersApi = new PhotographerApi('data/photographers.json')
+    }
+    
+    async init() {
+        let photographers = await this.photographersApi.getPhotographers();
         photographers.map(photographer => {
             const photographerTemplate = new PhotographerFactory(photographer);
-            photographersSection.innerHTML += photographerTemplate.UserCardDOM();
+            this.$photographerSection.innerHTML += photographerTemplate.UserCardDOM();
         });
-    }
-  
-    async init() {
-        const photographers = await PhotographerService.getPhotographers();
-  
-        this.displayData(photographers);
     }
 }
   
