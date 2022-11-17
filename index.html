@@ -1,31 +1,38 @@
-<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <title>Fisheye</title>
-  </head>
-  <body>
-    <header>
-        <img src="assets/images/logo.png" class="logo" alt="Fisheye Home Page" />
-        <h1 dir="ltr">Nos photographes</h1>
-    </header>
-    <main id="main">
-        <div class="photographer_section"></div>
-    </main>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <title>Fisheye</title>
+    </head>
 
-    <!-- Factories -->
-    <script src="js/factories/Photographer.js"></script>
-    <!-- Models -->
-    <script src="js/models/Photographer.js"></script>
-    <!-- Templates -->
-    <script src="js/templates/Photographer.js"></script>
-    <!-- Api -->
-    <script src="js/api/Api.js"></script>
-    <!-- Entry point -->
-    <script src="js/pages/App.js"></script>
-    <noscript>Alternate content for script</noscript>
-  </body>
+    <body>
+        <header id="header" aria-hidden="false">
+        <a href="#" aria-label="Page d'accueil de Fisheye">
+            <img src="assets/images/logo.png" class="logo" alt="Logo de Fisheye" />
+        </a>
+            <h1 dir="ltr">Nos photographes</h1>
+        </header>
+
+        <main id="main" aria-hidden="false">
+            <div class="photographer_section"></div>
+        </main>
+
+        <!-- Factories -->
+        <script src="js/factories/Photographer.js"></script>
+
+        <!-- Models -->
+        <script src="js/models/Photographer.js"></script>
+
+        <!-- Templates -->
+        <script src="js/templates/Photographer.js"></script>
+
+        <!-- Api -->
+        <script src="js/api/Api.js"></script>
+
+        <!-- Entry point -->
+        <script src="js/pages/App.js"></script>
+    </body>
 </html>

@@ -19,24 +19,24 @@ class PhotographerTemplate {
   
     UserTitleDOM() { return `Fisheye - ${this._data.name}`; }
   
-    UserBannerDOM() {
+    UserHeaderDOM() {
         return `
-            <div class="info">
-                <h1 class="name">${this._data.name}</h1>
-                <p class="location">${this._data.location}</p>
-                <p class="tagline">${this._data.tagline}</p>
-            </div>
-            <button class="btn btn-contact open" type="button" aria-label="Contact Me">Contactez-moi</button>
+            <article class="info">
+                <h2 class="name">${this._data.name}</h2>
+                <h3 class="location">${this._data.location}</h3>
+                <h4 class="tagline">${this._data.tagline}</h4>
+            </article>
+            <button class="contact_button open" type="button" aria-label="Contact Me">Contactez-moi</button>
             <img class="portrait" src=${this._data.portrait} alt="${this.name}">
         `;
     }
   
     UserInsertDOM() {
         return `
-            <div class="insert">
+            <aside role="complementary" class="insert">
                 <span class="insert-likes"></span>
                 <span class="insert-price">${this._data.price}€ / jour</span>
-            </div>
+            </aside>
         `;
     }
 }
