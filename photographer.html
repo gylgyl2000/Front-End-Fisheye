@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <title>Fisheye - photographe </title>
-  </head>
-  <body>
-    <header>
-      <img src="assets/images/logo.png" class="logo" />
-    </header>
-    <main id="main">
-      <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
-      </div>
-    </main>
-    <div id="contact_modal">
-			<div class="modal">
-				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+        <link href="css/photographer.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <script src="https://kit.fontawesome.com/5ae5fdf9eb.js" crossorigin="anonymous"></script>
+        <title>Fisheye - photographe</title>
+    </head>
+
+    <body>
+        <header id="header" aria-hidden="false">
+        <a href="index.html" aria-label="Page d'accueil de Fisheye">
+            <img src="assets/images/logo.png" class="logo" alt="Logo de Fisheye" />
+        </a>
         </header>
-				<form>
-					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-          <button class="contact_button">Envoyer</button>
-				</form>
-			</div>
-		</div>
-    <script src="js/pages/photographer.js"></script>
-    <script src="js/utils/contactForm.js"></script>
-    <script src="js/api/Api.js"></script>
-  </body>
+
+        <main id="main" aria-hidden="false">
+            <section class="photographer_header"></section>
+            <section class="photographer_gallery" tabindex="0"></section>
+        </main>
+
+        <!-- Pub/Sub -->
+        <script src="js/observers/Form.js"></script>
+        <script src="js/observers/Likes.js"></script>
+        <script src="js/observers/Modal.js"></script>
+        <script src="js/observers/Observer.js"></script>
+        <script src="js/observers/Sort.js"></script>
+
+        <!-- Factories -->
+        <script src="js/factories/Media.js"></script>
+        <script src="js/factories/Photographer.js"></script>
+
+        <!-- Models -->
+        <script src="js/models/Photographer.js"></script>
+        <script src="js/models/Media.js"></script>
+
+        <!-- Templates -->
+        <script src="js/templates/Photographer.js"></script>
+        <script src="js/templates/Media.js"></script>
+        <script src="js/templates/FormContact.js"></script>
+        <script src="js/templates/FilterDropdown.js"></script>
+        <script src="js/templates/LightBox.js"></script>
+        
+        <!-- Api -->
+        <script src="js/api/Api.js"></script>
+
+        <!-- Entry point -->
+        <script src="js/pages/Photographer.js"></script>
+    </body>
 </html>
