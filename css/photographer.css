@@ -17,7 +17,7 @@
 
 .photographer_header article h2 {
     color: #D3573C;
-    font-size: 64px;
+    font-size: 4.4444444444vw;
     line-height: 83px;
     height: 83px;
     margin: 0;
@@ -180,7 +180,7 @@
 .modal {
     display: flex;
     align-items: center;
-    margin: 58px auto;
+    margin: 4vh auto;
 }
 
 #lightbox {
@@ -190,7 +190,7 @@
 #lightbox .modal {
     position: relative;
     justify-content: center;
-    width: 87.0138888889vw;
+    width: 90vw;
 }
 
 #lightbox .modal button {
@@ -202,12 +202,12 @@
 }
 
 #lightbox .lightbox-container {
-    margin: 0 2.3861111111vw;
+    margin: 0 4vw;
 }
 
 #lightbox .modal .media {
-    width: 72.9166666667vw;
-    height: 62.5vw;
+    width: 72vw;
+    height: 87vh;
 }
 
 #lightbox .lightbox-caption {
@@ -236,9 +236,9 @@
     flex-direction: column;
     border-radius: 5px;
     padding: 15px 35px 38px;
-    width: 100%;
-    max-width: 669px;
     background-color: #db8876;
+    width: 41vw;
+    height: 90vh;
     mix-blend-mode: normal;
     filter: drop-shadow(-5px 10px 30px rgba(0, 0, 0, 0.25));
 }
@@ -256,9 +256,9 @@
 }
 
 #contact .modal header h1 {
-    font-size: 64px;
+    font-size: 3.7em;
     font-weight: normal;
-    line-height: 83px;
+    line-height: 1.2em;
 }
 
 #contact .modal header .contact-close {
@@ -282,9 +282,12 @@
     flex-direction: column;
 }
 
+
+
+
 #contact .modal .modal-body .formData label {
     color: #312e2e;
-    font-size: 36px;
+    font-size: 2em;
     line-height: 47px;
 }
 
@@ -300,15 +303,30 @@
 }
 
 #contact .modal .modal-body .formData input {
-    height: 68px;
+    height: 6vh;
 }
 
 #contact .modal .modal-body .formData.message {
     margin: 10px 0 26px;
 }
 
+
+#contact .modal .modal-body .formData[data-error]::after {
+    display: block;
+    margin: 8px 0 0 0;
+    content: attr(data-error);
+    color: #901c1c;
+    font-size: 18px;
+    line-height: 5px;
+    transition: .3s;
+}
+
+#contact .modal .modal-body .formData[data-error] .text-control {
+    border: 3px solid #911c1c;
+}
+
 #contact .modal .modal-body .formData textarea {
-    height: 170px;
+    height: 17vh;
     scrollbar-width: thin;
     resize: none;
 }
