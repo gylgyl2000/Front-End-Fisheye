@@ -63,10 +63,10 @@ img, video {
     width: 2.9166666667vw;
     height: 2.9166666667vw;
     mask: url("../assets/icons/close.svg");
-    -webkit-mask: url("../assets/icons/close.svg");
+    /* -webkit-mask: url("../assets/icons/close.svg"); */
     mask-size: auto;
     mask-size: 2.9166666667vw;
-    -webkit-mask-size: 2.9166666667vw;
+    /* -webkit-mask-size: 2.9166666667vw; */
 }
 
 .photographer_section {
