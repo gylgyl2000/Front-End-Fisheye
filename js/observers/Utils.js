@@ -1,22 +1,10 @@
-class Subject {
-  constructor() {
-    this.observers = [];
-  }
+import Subject from "./Subject.js";
+import ContactForm from "./ContactForm.js";
+import Lightbox from "./Lightbox.js";
+import Sort from "./Sort.js";
+import Likes from "./Likes.js";
 
-  attach(observer) {
-    this.observers.push(observer);
-  }
-
-  detach(observer) {
-    this.observers = this.observers.filter(obs => obs !== observer);
-  }
-
-  notify() {
-    this.observers.forEach(obs => obs.init());
-  }
-}
-
-class Utils {
+export default class Utils {
     static handler() {
         const gallery = [ ...document.querySelectorAll("[data-id]") ];
     

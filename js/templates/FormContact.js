@@ -1,4 +1,4 @@
-class FormContact {
+export default class FormContact {
     static FormContactDOM(name) {
         return `
             <section id="contact" class="modal-bg" aria-hidden="true">

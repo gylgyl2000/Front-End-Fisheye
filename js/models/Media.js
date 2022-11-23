@@ -1,4 +1,4 @@
-class MediaModel {
+export default class MediaModel {
     constructor(data) {
         this._id = data.id;
         this._photographerId = data.photographerId;
@@ -22,37 +22,4 @@ class MediaModel {
     get price() { return this._price; }
   
     get path() { return this._path; }
-}
-
-class ImageModel extends MediaModel {
-    constructor(data) {
-        super(data);
-        this._image = data.image;
-    }
-  
-    get media() {
-        return `
-            <figure class="media">
-                <img src="${this.path + this._image}" alt="${this.title}">
-            </figure>
-        `;
-    }
-}
-
-class VideoModel extends MediaModel {
-    constructor(data) {
-        super(data);
-        this._video = data.video;
-    }
-  
-    get media() {
-        const extension = this._video.split(".")[1];
-    
-        return `
-            <video class="media" tabindex="-1">
-                <source src="${this.path + this._video}" type="video/${extension}">
-                <track src="captions/vtt/captions_fr.vtt" kind="captions" srclang="fr" label="french_captions" default="true">
-            </video>
-        `;
-    }
 }

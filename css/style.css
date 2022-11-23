@@ -73,7 +73,7 @@ img, video {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5vw;
-    padding-top: 4vw;
+    padding-top: 2vw;
 }
 
 .photographer_section article {

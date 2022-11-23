@@ -1,4 +1,4 @@
-class LightBox {
+export default class LightBox {
     static LightBoxDOM() {
         return `
             <section id="lightbox" class="modal-bg" aria-hidden="true">

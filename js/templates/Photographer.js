@@ -1,4 +1,4 @@
-class PhotographerTemplate {
+export default class PhotographerTemplate {
     constructor(data) {
       this._data = data;
     }

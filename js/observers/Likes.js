@@ -1,4 +1,4 @@
-class Likes {
+export default class Likes {
     constructor() {
         this.insertLikes = document.querySelector(".insert-likes");
         this._likes = 0;

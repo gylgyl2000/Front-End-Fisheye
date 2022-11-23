@@ -1,4 +1,4 @@
-class FilterDropdown {
+export default class FilterDropdown {
     static FilterDropdownDOM() {
         return `
             <section class="filters">

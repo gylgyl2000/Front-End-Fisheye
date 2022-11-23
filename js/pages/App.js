@@ -1,3 +1,6 @@
+import PhotographerFactory from "../factories/Photographer.js"
+import PhotographerApi from "../api/PhotographerApi.js"
+
 class App {
     constructor() {
         this.$photographerSection = document.querySelector(".photographer_section");

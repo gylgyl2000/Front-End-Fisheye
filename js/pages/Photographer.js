@@ -1,3 +1,12 @@
+import PhotographerApi from "../api/PhotographerApi.js";
+import MediaApi from "../api/MediaApi.js";
+import PhotographerFactory from "../factories/Photographer.js";
+import MediaFactory from "../factories/Media.js";
+import FilterDropdown from "../templates/FilterDropdown.js";
+import FormContact from "../templates/FormContact.js";
+import LightBox from "../templates/LightBox.js";
+import Utils from "../observers/Utils.js";
+
 class App {
     constructor() {
         this.$photographerMain = document.querySelector("#main");

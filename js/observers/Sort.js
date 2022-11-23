@@ -1,23 +1,23 @@
-class Sort {
+export default class Sort {
     constructor(gallery) {
         this._gallery = gallery;
         this._icon = document.querySelector(".filters-button");
         this._option = document.querySelector(".filters-option");
     }
   
-    #sortByPopularity(a, b) {
+    sortByPopularity(a, b) {
         const likesA = parseInt(a.dataset.likes);
         const likesB = parseInt(b.dataset.likes);
         return ((likesA < likesB) ? 1 : (likesA == likesB) ? 0 : -1);
     }
   
-    #sortByDate(a, b) {
+    sortByDate(a, b) {
         const dateA = new Date(a.dataset.date);
         const dateB = new Date(b.dataset.date);
         return ((dateA < dateB) ? 1 : (dateA == dateB) ? 0 : -1);
     }
   
-    #sortByTitle(a, b) {
+    sortByTitle(a, b) {
         const titleA = a.dataset.title;
         const titleB = b.dataset.title;
         return (titleA < titleB) ? -1 : 1;
@@ -25,13 +25,13 @@ class Sort {
   
     sortByHandler(filtersValue) {
         switch (filtersValue) {
-        case "Popularité": this._gallery.sort(this.#sortByPopularity);
+        case "Popularité": this._gallery.sort(this.sortByPopularity);
             break;
     
-        case "Date": this._gallery.sort(this.#sortByDate);
+        case "Date": this._gallery.sort(this.sortByDate);
             break;
     
-        case "Titre": this._gallery.sort(this.#sortByTitle);
+        case "Titre": this._gallery.sort(this.sortByTitle);
             break;
         }
     
