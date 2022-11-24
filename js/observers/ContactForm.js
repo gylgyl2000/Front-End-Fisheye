@@ -7,7 +7,7 @@ export default class ContactForm extends Modal {
         this.form = document.querySelector("#contact-form");
     }
   
-    isInvalid() {
+    #isInvalid() {
         const formData = [ ...document.querySelectorAll(".formData") ];
         const check = new CheckIsInvalid(formData);
     
@@ -24,7 +24,7 @@ export default class ContactForm extends Modal {
     
         e.preventDefault();
     
-        if (this.isInvalid()) return;
+        if (this.#isInvalid()) return;
     
         console.log("contact: ", result);
     

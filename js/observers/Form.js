@@ -1,11 +1,9 @@
 export default class Form {
-    constructor (formData) {
+    constructor(formData) {
         this.formData = formData;
     }
   
-    getFormData(id) {
-        this.formData.find(el => el.querySelector(id))
-    }
+    getFormData = id => this.formData.find(el => el.querySelector(id));
   
     checkInput(id, fn) {
         const formdata = this.getFormData(id);
